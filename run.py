@@ -24,9 +24,7 @@ def acc_login(user_name, password):
     this function validates user login by calling the validate function in the credentials class
     '''
     return User.validate_user(user_name, password)
-    # validated_user = Credentials.validate_user(user_name, password)
-    # return validated_user
-    # return Credentials.search_user_credentials(credentials_list)
+    
 
 def create_credentials(user_account,user_name, password):
     '''
@@ -53,7 +51,7 @@ def generate_pass():
 
 def password_lock():
     output = '''
-    Hello and Welcome to Pass Lock Select an option below \n
+    Hello and Welcome to Password Locker! Select an option below \n
     Enter 1 to create a pass Lock account \n
     Enter 2 if you already have an existing account \n
     '''
@@ -63,7 +61,7 @@ def password_lock():
 
     if user_input ==  '1':
         print('enter your details below to create a new account')
-        user_name = input('enter prefered user_name ')
+        user_name = input('enter preffered user_name ')
 
         while True:
             pass_input = '''
@@ -80,7 +78,7 @@ def password_lock():
                 print("password can't be empty")
             
             save_new_user(create_new_user(user_name, password))
-            print(f"Hi {user_name} you account is ready use thispassword:  {password} to login")
+            print(f"Hi {user_name} your account is ready! Use this password:  {password} to login")
             break
         
     elif user_input == '2':
@@ -95,9 +93,7 @@ def password_lock():
             
             print('welcome {user_name} login was successful')
 
-        # validated_user = acc_login(user_name,password)
-        # if validated_user == acc_login(user_name, password):
-        #     print('Hi {user_name} login was succesful')
+        
         else:
             print('Pass Lock account not found enter correct details or create an account')
             # sys.exit("create an account and try again")
