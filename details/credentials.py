@@ -78,10 +78,10 @@ class Credentials:
                 return cls.credentials_list
     
     
-    def generate_password(length=6):
+    def generate_password(length=8):
         '''
         generate random password
         '''
         
-        password = string.ascii_lowercase + string.digits + string.ascii_uppercase + "'@#!&*$`"
+        password = string.ascii_lowercase + string.digits + string.ascii_uppercase + "1234567890abcdefghijklmnopqrstuvwxyz'@#!&*$`"
         return ''.join(random.choice(password) for _ in range(length))
