@@ -16,3 +16,8 @@ def show_user(user):
     this function displays a user
     '''
     user.show_user()
+    def acc_login(user_name, password):
+    '''
+    function that validates user login by calling the validate function in the credentials class
+    '''
+    return User.validate_user(user_name, password
