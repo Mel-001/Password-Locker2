@@ -27,3 +27,5 @@ def show_user(user):
     '''
     new_credentials = Credentials(user_account, user_name,password)
     return new_credentials
+def save_credentials(credentials_list):
+    Credentials.save_credentials(credentials_list)
