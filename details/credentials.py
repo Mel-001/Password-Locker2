@@ -59,3 +59,10 @@ class Credentials:
             if credentials_list.user_account == user_account:
                 cls.credentials_list.remove(credentials_list)
                 return cls.credentials_list
+            def generate_password(length=6):
+        '''
+        generate random password
+        '''
+        
+        password = string.ascii_lowercase + string.digits + string.ascii_uppercase + "'@#!&*$`"
+        return ''.join(random.choice(password) for _ in range(length))
