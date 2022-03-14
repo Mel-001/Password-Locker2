@@ -49,3 +49,13 @@ class Credentials:
 
 
         return cls.credentials_list
+    @classmethod
+    def delete_credentials_account(cls, user_account):
+        '''
+        delete a credentials account
+        '''
+        
+        for credentials_list in cls.credentials_list:
+            if credentials_list.user_account == user_account:
+                cls.credentials_list.remove(credentials_list)
+                return cls.credentials_list
