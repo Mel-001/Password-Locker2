@@ -21,3 +21,9 @@ def show_user(user):
     function that validates user login by calling the validate function in the credentials class
     '''
     return User.validate_user(user_name, password
+                              def create_credentials(user_account,user_name, password):
+    '''
+    create a credentials user account
+    '''
+    new_credentials = Credentials(user_account, user_name,password)
+    return new_credentials
