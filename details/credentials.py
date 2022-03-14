@@ -21,3 +21,13 @@ class Credentials:
         self.user_account = user_account
         self.user_name = user_name
         self.password = password
+        
+        def save_credentials(self):
+
+        '''
+        add new credential to credentials_list
+        '''
+
+        Credentials.credentials_list.append(self)
+
+    @classmethod 
