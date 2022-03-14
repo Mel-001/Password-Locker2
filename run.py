@@ -29,3 +29,12 @@ def show_user(user):
     return new_credentials
 def save_credentials(credentials_list):
     Credentials.save_credentials(credentials_list)
+    
+def delete_credentials(credentials_list):
+    Credentials.delete_credentials_account(credentials_list
+def search_credentials(credentials_list):
+    return Credentials.search_user_credentials(credentials_list)
+
+def list_credentials():
+    return Credentials.show_credentials()
+
