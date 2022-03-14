@@ -11,13 +11,13 @@ class UserTest(unittest.TestCase):
         '''
         run this before the test
         '''
-        self.user = User('Toni','1234')
+        self.user = User('Mel','1234')
     def test_add_user(self):
         '''
         test case to check if user instance is similar
 
         '''
-        self.assertEqual(self.user.user_name,'Toni')
+        self.assertEqual(self.user.user_name,'Mel')
         self.assertEqual(self.user.password,'1234')
 
     def test_save_user(self):
@@ -41,12 +41,12 @@ class CredentialsTest(unittest.TestCase):
             '''
             this method runs before the test
             '''
-            self.credentials_list = Credentials('facebook', 'toni', 'pass')
+            self.credentials_list = Credentials('facebook', 'mel', 'pass')
 
     def test_create_credentials(self):
     
         self.assertEqual(self.credentials_list.user_account, 'facebook')
-        self.assertEqual(self.credentials_list.user_name, 'toni')
+        self.assertEqual(self.credentials_list.user_name, 'mel')
         self.assertEqual(self.credentials_list.password, 'pass')
 
     def test_save_credentials(self):
@@ -63,14 +63,14 @@ class CredentialsTest(unittest.TestCase):
         this method deletes credentials
         '''
         self.credentials_list.save_credentials()
-        test_credentials = Credentials('twitter','anto','test')
+        test_credentials = Credentials('twitter','melonie','test')
         test_credentials.save_credentials()
         self.credentials_list.delete_credentials_account(test_credentials.user_account)
         self.assertEqual(len(Credentials.credentials_list), 1)
 
     def test_find_credentials(self):
         self.credentials_list.save_credentials()
-        test_credentials = Credentials('youtube','antony','test')
+        test_credentials = Credentials('youtube','melonie','test')
         test_credentials.save_credentials()
         found_credentials = Credentials.search_user_credentials('test')
 
