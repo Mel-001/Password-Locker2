@@ -31,3 +31,21 @@ class Credentials:
         Credentials.credentials_list.append(self)
 
     @classmethod 
+    def search_user_credentials(cls, user_account):
+
+        '''
+        method that searches user credentials
+        '''
+        
+        for credential in cls.credentials_list:
+            if credential.user_account == user_account:
+                return credential
+            @classmethod
+            def show_credentials(cls):
+
+        '''
+        function displays user credentials
+        '''
+
+
+        return cls.credentials_list
